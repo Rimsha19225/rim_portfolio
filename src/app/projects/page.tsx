@@ -54,7 +54,7 @@ const projects = [
     name: "E Commerce",
     description: "A modern and fully responsive e-commerce web application developed using Next.js with TypeScript, integrated with Sanity CMS for dynamic content management. The project features product listings, filtering by category, detailed product pages, and a clean shopping experience. Data is fetched through custom APIs built using Sanity’s GROQ queries. The application is deployed on Vercel, ensuring fast performance and seamless user experience across devices.",
     image: "/image/e_commerce.png",
-    link: "https://ice-cream-ten-lime.vercel.app/"
+    link: "https://shop-co-orpin.vercel.app/"
   },
   {
     id: "todo",
@@ -93,7 +93,7 @@ const projects = [
   },
   {
     id: "country",
-    name: "County Detail",
+    name: "Country Detail",
     description: "A responsive and informative web application built using Next.js with TypeScript, styled with Tailwind CSS. This app displays detailed information about countries, including name, flag, capital, population, region, and more. Data is fetched dynamically from a public API, and the interface is designed for clarity and ease of navigation across all device sizes. A perfect blend of clean UI and efficient data handling.",
     image: "/image/country.png",
     link: "https://world-country-eta.vercel.app/"

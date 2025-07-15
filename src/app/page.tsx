@@ -40,7 +40,7 @@ export default async function Home() {
         </span>
       </h2>
       {messages.length > 0 && <MessageSlider messages={messages} />}
-      <div className="flex justify-center mt-6"><Link href={"/review"}><button className="px-3 md:px-6 py-2 md:py-3 bg-[#000] rounded-xl text-[#ffe4c4] hover:shadow-[0_0_16px_#ffe4c4] text-[0.8rem] md:text-[1rem]">Drop Message</button></Link></div>
+      <div className="flex justify-center mt-6"><Link href={"/review"}><button className="px-3 md:px-6 py-2 md:py-3 bg-[#000] rounded-xl text-[#ffe4c4] hover:shadow-[0_0_16px_#ffe4c4] text-[0.8rem] md:text-[1rem]">Drop Message ✎𓂃</button></Link></div>
     </div>
       <hr className="w-full max-w-[90%] md:max-w-[70%] h-[2px] border-none bg-gradient-to-l from-[#ffe4c4] to-black m-auto"/>
       <hr className="w-full max-w-[90%] md:max-w-[70%] h-[2px] border-none bg-gradient-to-l from-[#ffe4c4] to-black m-auto mt-1"/>

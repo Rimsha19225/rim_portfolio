@@ -12,32 +12,6 @@ type MessageSliderProps = {
   messages: Message[]
 }
 
-function getTimeAgo(dateString: string) {
-  const date = new Date(dateString)
-  const now = new Date()
-  const diff = Math.floor((now.getTime() - date.getTime()) / 1000)
-
-  const units: [number, Intl.RelativeTimeFormatUnit][] = [
-    [60, 'seconds'],
-    [60, 'minutes'],
-    [24, 'hours'],
-    [30, 'days'],
-    [12, 'months'],
-    [Infinity, 'years'],
-  ]
-
-  let value = diff
-  let unit: Intl.RelativeTimeFormatUnit = 'seconds'
-
-  for (let i = 0; i < units.length; i++) {
-    if (value < units[i][0]) break
-    value = Math.floor(value / units[i][0])
-    unit = units[i][1]
-  }
-
-  return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(-value, unit)
-}
-
 export default function MessageSlider({ messages }: MessageSliderProps) {
   const [isPaused, setIsPaused] = useState(false)
   const allMessages = [...messages, ...messages] 
@@ -54,9 +28,9 @@ export default function MessageSlider({ messages }: MessageSliderProps) {
             key={idx}
             className="w-[5%] md:w-[8%] bg-[#d5bea2] rounded-xl shadow-md px-4 py-3 text-center flex-shrink-0"
           >
-            <p className="text-xs text-black text-left">{getTimeAgo(msg.createdAt)}</p>
-            <p className="text-sm mt-2 text-gray-700">— {msg.name}</p>
-            <p className="italic text-black">&quot;{msg.message}&quot;</p>
+            <p className="text-xs text-black text-left">{new Date(msg.createdAt).toLocaleString('en-US', {dateStyle: 'medium', timeStyle: 'short',})}</p>
+            <p className="text-[1.2rem] mt-2 text-[#353535] font-semibold">{msg.name}</p>
+            <p className="italic text-black text-left">&quot;{msg.message}&quot;</p>
           </div>
         ))}
       </div>
