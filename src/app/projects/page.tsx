@@ -40,7 +40,7 @@ const projects = [
     name: "Resuma Builder",
     description: "A fully responsive and interactive Resume Builder web application built using HTML, CSS, and JavaScript, and deployed on Vercel. Users can input their personal, educational, and professional details to generate a clean, structured resume. The app features dynamic form fields, section toggling, and a real-time preview. It also includes a PDF download option, enabling users to instantly save and share their resumes — all through a simple and user-friendly interface.",
     image: "/image/resuma.png",
-    link: "https://mile-1-sa31.vercel.app/"
+    link: "https://resuma-builder-one.vercel.app/"
   },
   {
     id: "password",
