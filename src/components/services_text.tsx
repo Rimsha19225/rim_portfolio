@@ -63,7 +63,7 @@ const AnimatedCard = ({ icon, title, description, link }: CardProps) => {
       ref={ref}
       initial={{ opacity: 0, scale: 0.65, y: 40 }}
       animate={animation}
-      className="w-full h-[38vh] md:h-[42vh] p-3 md:p-5 bg-white/20 md:bg-[#d5bea2] border-[#d5bea2] md:border-black border-1 rounded-2xl hover:scale-104 transition duration-300"
+      className="w-full h-auto md:h-[42vh] p-3 md:p-5 bg-white/20 md:bg-[#d5bea2] border-[#d5bea2] md:border-black border-1 rounded-2xl hover:scale-104 transition duration-300"
     >
       {icon}
       <h2 className="font-semibold text-[1rem] md:text-[1.3rem] mb-1">{title}</h2>
