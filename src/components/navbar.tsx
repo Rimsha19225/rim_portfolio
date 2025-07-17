@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full z-50">
-      <div className='w-full h-[15vh] flex justify-between items-center px-4 max-w-[98%] md:max-w-[85%] m-auto'>
+      <div className='w-full h-[10vh] md:h-[15vh] flex justify-between items-center px-4 max-w-[98%] md:max-w-[85%] m-auto'>
         <div>
           <Link href={"/"}>
             <Image src="/image/logo.png" alt='icon' width={200} height={200} className='w-[3.5rem] h-[3.5rem] md:w-[6.5rem] md:h-[6.5rem] shake-on-hover' />
