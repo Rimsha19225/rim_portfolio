@@ -41,10 +41,10 @@ const MainPageText = () => {
 
 
   return (
-    <div className=" bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden w-full h-full">
+    <div className="min-h-screen bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden w-full h-full">
       <Navbar />
-      <div ref={sectionRef} className="flex justify-center items-center h-auto md:h-[72vh]">
-        <div className="flex flex-col-reverse md:flex-row w-full gap-[4rem] md:gap-4 px-2 md:px-6 justify-between items-center max-w-[60rem]">
+      <div ref={sectionRef} className="flex justify-center items-center h-[66vh] md:h-[72vh]">
+        <div className="flex flex-col-reverse md:flex-row w-full gap-[3.5rem] md:gap-4 px-2 md:px-6 justify-between items-center max-w-[60rem]">
           <div className="w-[95%] md:w-[44%]">
             <motion.div initial={{ x: -50, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="mb-2 md:mb-3 text-[#202020] text-[0.8rem] md:text-[1rem]">Hello it&apos;s me</motion.div>
             <motion.div initial={{ x: -50, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="mb-2 md:mb-3 text-[1rem] md:text-[1.5rem] leading-[1.7rem] md:leading-[2rem] text-[#202020] font-extrabold">

@@ -27,8 +27,8 @@ const AboutText = () => {
       }, [isInView, leftControl, rightControl, buttonControl, topControl])
 
   return (
-    <div className=" bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden w-full h-auto md:h-full">
-        <div className="flex justify-center items-center h-auto md:h-[92vh]">
+    <div className="min-h-screen bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden w-full h-full">
+        <div className="flex justify-center items-center h-[92vh]">
             <div className="flex flex-col md:flex-row w-full gap-2 px-6 justify-between items-center max-w-[55rem]">
                 <motion.div ref={sectionRef} initial={{ x: -100, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="relative w-[11rem] md:w-[22rem] h-[13rem] md:h-[25rem] mt-10 flex items-center justify-center bg-gradient-to-tr from-[#1b1f24] via-[#101113] to-[#000000] rounded-[1rem] hover:shadow-[0_0_25px_#000]">
                     <div className="absolute inset-0 rounded-[1rem] bg-gradient-to-r from-[#ffe4c4] via-[#000] to-[#ffe4c4] p-1 ">
