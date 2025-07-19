@@ -21,13 +21,13 @@ const projects = [
     image: "/image/admin_iceCream.png",
     link: "https://admin-ice-cream-shop.vercel.app/"
   },
-  {
-    id: "pizza",
-    name: "Pizza Shop",
-    description: "A dynamic and responsive web application built using Next.js, typeScript, and Tailwind CSS to showcase a modern pizza ordering experience. The site includes an attractive UI, product listings with prices, category-based filtering, and a mobile-friendly layout. Designed for speed and usability, this project demonstrates strong frontend development skills with clean, component-based architecture.",
-    image: "/image/pizza.png",
-    link: "https://ice-cream-ten-lime.vercel.app/"
-  },
+  // {
+  //   id: "pizza",
+  //   name: "Pizza Shop",
+  //   description: "A dynamic and responsive web application built using Next.js, typeScript, and Tailwind CSS to showcase a modern pizza ordering experience. The site includes an attractive UI, product listings with prices, category-based filtering, and a mobile-friendly layout. Designed for speed and usability, this project demonstrates strong frontend development skills with clean, component-based architecture.",
+  //   image: "/image/pizza.png",
+  //   link: "https://ice-cream-ten-lime.vercel.app/"
+  // },
   {
     id: "bmi_calculator",
     name: "BMI Calculator",
@@ -68,7 +68,7 @@ const projects = [
     name: "Countdown Timer",
     description: "A responsive and interactive countdown timer (stopwatch-style) web application built using Next.js with TypeScript, and deployed on Vercel. The app allows users to start, pause, and reset a countdown timer with real-time updates and smooth UI transitions. Designed with a clean interface and component-based architecture, this project demonstrates efficient state management and responsive design across all devices.",
     image: "/image/countdown.png",
-    link: "https://timer-iota-flax.vercel.app/"
+    link: "https://alarm-taupe.vercel.app/"
   },
   {
     id: "library",
@@ -76,6 +76,13 @@ const projects = [
     description: "A user-friendly library management app developed using Python and deployed with Streamlit, designed to help users organize and track their personal book collection. The app allows users to add, remove, search, and view books, along with displaying helpful statistics about the collection. With a clean and interactive interface, this tool simplifies personal book management and demonstrates practical use of Python with Streamlit for real-world utilities.",
     image: "/image/library.png",
     link: "https://personallibrarymanager-nybthhmqkc7aw7uruf7h8d.streamlit.app/"
+  },
+  {
+    id: "pcb",
+    name: "Pakistan Cricket Board",
+    description: "A mobile-responsive web application designed for the Pakistan Cricket Board, developed using Next.js and styled with Tailwind CSS. The app showcases cricket-related content such as team details, match schedules, player profiles, and latest updates. With a clean UI and optimized performance, the project ensures a smooth user experience across devices, reflecting professional-level design and frontend development skills.",
+    image: "/image/pcb.png",
+    link: "https://pcb-bice.vercel.app/"
   },
   {
     id: "unit",
@@ -161,7 +168,7 @@ const ProjectCard = ({name, description, image, index, link, id}: {name: string;
       {/* Text */}
       <div className="w-full md:w-[50%] text-center md:text-left text-black space-y-4 p-3 md:p-4">
         <h3 className="text-[1.5rem] md:text-[2.2rem] font-bold text-shadow-[0_3px_5px_#ffe4c4] leading-[2.5rem]">{name}</h3>
-        <p className="text-sm md:text-base text-black md:text-[#ffe4c4] text-justify">{description}</p>
+        <p className="text-sm md:text-base text-black md:text-[#ffe4c4] md:text-shadow-[0_3px_5px_#000] text-justify">{description}</p>
         <Link href={link} target="_blank">
           <button className={`px-4 py-2 text-[#ffe4c4] bg-black font-semibold rounded ${!isEven ? "md:hover:shadow-[0_0_15px_#000]" : ""} hover:shadow-[0_0_15px_#ffe4c4] transition`}>
             View Project

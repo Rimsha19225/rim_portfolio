@@ -10,8 +10,8 @@ const projectImages = [
         link: "/projects#ice_cream"
     },
     {
-        src: "/image/pizza.png",
-        link: "/projects#pizza"
+        src: "/image/pcb.png",
+        link: "/projects#pcb"
     },
     {
         src: "/image/resuma.png",
