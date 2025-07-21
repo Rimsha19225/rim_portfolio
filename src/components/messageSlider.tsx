@@ -1,5 +1,4 @@
 'use client'
-import { client } from '../sanity/lib/client'
 
 import { useState } from 'react'
 
@@ -18,22 +17,6 @@ export default function MessageSlider({ messages }: MessageSliderProps) {
   const [isPaused, setIsPaused] = useState(false)
   const allMessages = [...messages, ...messages] 
 
-  const handleDelete = async (id: string) => {
-  if (!id) {
-    console.error("No ID provided to delete")
-    return
-  }
-
-  try {
-    console.log("Deleting document with ID:", id)
-    await client.delete(id)
-    alert("Message deleted successfully")
-    // Optional: Refresh state
-  } catch (err) {
-    console.error("Sanity deletion error:", err)
-    alert("Failed to delete message")
-  }
-}
 
   return (
     <div
@@ -50,7 +33,6 @@ export default function MessageSlider({ messages }: MessageSliderProps) {
             <p className="text-xs text-black text-left">{new Date(msg.createdAt).toLocaleString('en-US', {dateStyle: 'medium', timeStyle: 'short',})}</p>
             <p className="text-[1.2rem] mt-2 text-[#353535] font-semibold">{msg.name}</p>
             <p className="italic text-black text-left">&quot;{msg.message}&quot;</p>
-            <button onClick={() => handleDelete(msg._id)} className="text-red-600 mt-2 text-sm">delete</button>
           </div>
         ))}
       </div>
