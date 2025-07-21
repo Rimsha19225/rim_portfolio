@@ -8,7 +8,7 @@ const Cv = () => {
       <div className="flex justify-center items-center h-auto">
         <div className="flex w-full gap-4 px-6 justify-between items-center max-w-[100%] md:max-w-[40%]">
             <iframe
-                src="/docs/RimshaResume.pdf"
+                src="/docs/Rimsha Resume.pdf"
                 className="w-full h-[60vh] my-16"
                 title="PDF Viewer"
             />
