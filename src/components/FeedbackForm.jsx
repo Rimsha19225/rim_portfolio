@@ -69,7 +69,7 @@ export default function FeedbackForm() {
         <input type="email" name="email" placeholder="Email" onChange={handleChange} value={formData.email} className="w-full p-2 border rounded" required />
         <textarea name="message" placeholder="Your message" onChange={handleChange} value={formData.message} className="w-full p-2 border rounded" required />
         <button type="submit" className="bg-black text-white px-4 py-2 rounded">Send Message</button>
-        {success && <p className="text-green-500">Message submitted successfully!</p>}
+        {success && <p className="text-black text-center">Message submitted successfully!</p>}
       </motion.form>
     </div>
   )

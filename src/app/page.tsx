@@ -12,6 +12,7 @@ import SkillCircle from "@/components/circularBarSkills";
 
 async function getMessages() {
   const query = `*[_type == "message"] | order(createdAt desc)[0...10]{
+    _id,
     name,
     message,
     createdAt
