@@ -38,7 +38,7 @@ const MainPageText = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#9C27B0] to-[#4A148C] overflow-x-hidden w-full h-full">
-      <div ref={sectionRef} className="flex justify-center pt-[2rem] md:pt-[16rem] items-center h-[100vh] md:h-[68vh]">
+      <div ref={sectionRef} className="flex justify-center pt-[1rem] md:pt-[16rem] items-center h-[100vh] md:h-[68vh]">
         <div className="flex flex-col-reverse md:flex-row w-full gap-[3.5rem] md:gap-4 px-2 md:px-6 justify-between items-center max-w-[60rem]">
           <div className="w-[95%] md:w-[44%]">
             <motion.div initial={{ x: -50, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="mb-2 md:mb-3 text-[#fff] text-[0.8rem] md:text-[1rem]">Hello it&apos;s me</motion.div>
