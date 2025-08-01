@@ -15,7 +15,7 @@ const SkillBarText = () => {
   const headingControls = useAnimation();
   const iconControls = useAnimation();
   const animation = useAnimation();
-  const text = "rimsha ✿ rimsha ✿ rimsha ✿ ";
+  const text = "rimsha ✿ rimsha ✿ rimsha ✿ rimsha ✿";
 
   useEffect(() => {
   const circle = textCircleRef.current;
@@ -34,7 +34,7 @@ const SkillBarText = () => {
       span.style.transform = `rotate(${i * deg}deg) translate(${radius}px) rotate(-${i * deg}deg)`;
       span.style.transformOrigin = "0 0";
       span.style.fontSize = "10px";
-      span.style.color = "black";
+      span.style.color = "#000";
       span.style.fontFamily = "sans-serif";
       span.style.whiteSpace = "pre";
       circle.appendChild(span);
@@ -55,7 +55,7 @@ const SkillBarText = () => {
 }, [isInView, headingControls, iconControls, animation]);
 
   return (
-    <div className="w-full bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden py-4 md:py-8">
+    <div className="w-full bg-gradient-to-r from-[#9C27B0] to-[#4A148C] overflow-x-hidden py-4 md:py-8">
       <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[1.8rem] md:gap-[2.5rem]">
         <div className="relative w-[120px] md:w-[200px] h-[120px] md:h-[200px] overflow-hidden">
           <div className="absolute top-1/2 left-1/2 w-[100px] md:w-[160px] h-[100px] md:h-[160px] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -75,10 +75,10 @@ const SkillBarText = () => {
             </Link>
           </div>
         </div>
-        <motion.div ref={sectionRef} initial={{ x: 50, opacity: 0 }} animate={headingControls} transition={{ duration: 2, ease: "easeInOut"}} className="text-[2rem] md:text-[3rem] text-center md:text-left font-bold ml-0 md:ml-[-2rem] mr-0 md:mr-[8rem] text-shadow-[0_4px_8px_#000] text-[#ffe4c4] leading-[2.2rem] md:leading-[3.5rem]">
+        <motion.div ref={sectionRef} initial={{ x: 50, opacity: 0 }} animate={headingControls} transition={{ duration: 2, ease: "easeInOut"}} className="text-[2rem] md:text-[3rem] text-center md:text-left font-bold ml-0 md:ml-[-2rem] mr-0 md:mr-[8rem] text-shadow-[0_3px_5px_#fff] text-[#000] leading-[2.2rem] md:leading-[3.5rem]">
           My Skills <br /> Development
         </motion.div>
-        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-4 text-[1rem] md:text-[2rem] text-black md:text-[#ffe4c4]">
+        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-4 text-[1rem] md:text-[2rem] text-[#fff]">
           {[FaHtml5, FaCss3Alt, FaJs, FaReact, SiNextdotjs, TbUxCircle, FaPencilRuler, MdDevices, FaFileWord, FaFileExcel, FaFilePowerpoint, FaUserTie].map(
             (Icon, idx) => (
               <motion.div
@@ -86,7 +86,7 @@ const SkillBarText = () => {
                 initial={{ opacity: 0, scale: 0.65, y: 40 }}
                 animate={animation}
                 key={idx}
-                className="w-10 md:w-14 h-10 md:h-14 rounded-full border-2 border-black md:border-[#ffe4c4] flex items-center justify-center hover:shadow-[0_0_12px_#ffe4c4]"
+                className="w-10 md:w-14 h-10 md:h-14 rounded-full border-2 border-[#fff] flex items-center justify-center hover:shadow-[0_0_12px_#c119e0]"
               >
                 <Icon />
               </motion.div>

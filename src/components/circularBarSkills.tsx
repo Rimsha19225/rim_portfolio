@@ -9,7 +9,7 @@ type SkillCircleProps = {
   color?: string
 }
 
-export default function SkillCircle({ icon, percentage, color = '#ffe4c4' }: SkillCircleProps) {
+export default function SkillCircle({ icon, percentage, color = '#fff' }: SkillCircleProps) {
   const radius = 50
   const stroke = 10
   const normalizedRadius = radius - stroke * 0.8
@@ -50,10 +50,10 @@ export default function SkillCircle({ icon, percentage, color = '#ffe4c4' }: Ski
       </svg>
 
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[100px] h-[100px]">
-        <div className="text-2xl text-black md:text-[#ffe4c4]">{icon}</div>
+        <div className="text-2xl text-[#fff]">{icon}</div>
       </div>
 
-      <div className="mt-2 text-sm font-semibold text-black md:text-[#ffe4c4]">{percentage}%</div>
+      <div className="mt-2 text-sm font-semibold text-[#fff]">{percentage}%</div>
     </div>
   )
 }

@@ -63,13 +63,13 @@ const AnimatedCard = ({ icon, title, description, link }: CardProps) => {
       ref={ref}
       initial={{ opacity: 0, scale: 0.65, y: 40 }}
       animate={animation}
-      className="w-full h-auto md:h-[42vh] p-3 md:p-5 bg-white/20 md:bg-[#d5bea2] border-[#d5bea2] md:border-black border-1 rounded-2xl hover:scale-104 transition duration-300"
+      className="w-full h-auto md:h-[42vh] p-3 md:p-5  bg-white/20 border-[#d5bea2] md:border-[#fff] border-1 rounded-2xl hover:scale-104 transition duration-300"
     >
       {icon}
-      <h2 className="font-semibold text-[1rem] md:text-[1.3rem] mb-1">{title}</h2>
-      <p className="text-[#3c3939] text-[0.8rem] md:text-[1rem]">{description}</p>
+      <h2 className="text-[#fff] font-semibold text-[1rem] md:text-[1.3rem] mb-1 text-center">{title}</h2>
+      <p className="text-[#fff] text-[0.8rem] md:text-[1rem] text-justify">{description}</p>
       <Link href={link} scroll={false}>
-        <button className="bg-black text-[#ffe4c4] px-3 md:px-4 py-[6px] md:py-2 rounded-xl my-2">
+        <button className="bg-black text-[#fff] px-3 md:px-4 py-[6px] md:py-2 rounded-xl my-2">
           See More
         </button>
       </Link>
@@ -79,12 +79,12 @@ const AnimatedCard = ({ icon, title, description, link }: CardProps) => {
 
 const ServicesText = () => {
   return (
-    <div className="bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden w-full h-full">
+    <div className="bg-gradient-to-r from-[#9C27B0] to-[#4A148C] overflow-x-hidden w-full h-full">
       <div className="flex flex-col items-center justify-center h-auto md:h-[77vh] py-10 md:py-0">
-        <h2 className="text-[2rem] md:text-[3rem] font-bold text-black mb-6 md:mb-8 text-center drop-shadow-md text-shadow-[0_3px_5px_#ffe4c4]">
-          My <span className="text-[#ffe4c4] text-shadow-[0_4px_8px_#000]">Services</span>
+        <h2 className="text-[2rem] md:text-[3rem] font-bold text-black mb-6 md:mb-8 text-center drop-shadow-md text-shadow-[0_3px_5px_#fff]">
+          My <span className="text-[#fff] text-shadow-[0_0px_0px_#fff]">Services</span>
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 px-4 md:px-6 justify-between items-center max-w-[100%] md:max-w-[75rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 px-4 md:px-6 justify-between items-center max-w-[100%] md:max-w-[78%]">
           {cardData.map((card, index) => (
             <AnimatedCard
               key={index}

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Navbar from "../../components/navbar";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
@@ -41,7 +40,7 @@ const AnimatedSection = ({title, content, id,}: {title: string; content: string;
         initial={{ x: -30, opacity: 0 }}
         animate={leftcontrols}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="pt-2 md:pt-3 pb-1 md:pb-2 text-[1.2rem] md:text-[2rem] font-semibold text-shadow-[0_2px_6px_#ffe4c4]"
+        className="pt-2 md:pt-3 pb-1 md:pb-2 text-[1.2rem] md:text-[2rem] font-semibold text-shadow-[0_2px_6px_#fff]"
       >
         {title}
       </motion.h2>
@@ -50,7 +49,7 @@ const AnimatedSection = ({title, content, id,}: {title: string; content: string;
         initial={{ x: 30, opacity: 0 }}
         animate={rightcontrols}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className=" px-4 text-[0.8rem] md:text-[1.1rem] text-black md:text-[#ffe4c4] text-justify text-shadow-[0_0_0px_#000] md:text-shadow-[0_4px_8px_#000]"
+        className=" px-4 text-[0.8rem] md:text-[1.1rem] text-[#fff] text-justify text-shadow-[0_0_0px_#000] md:text-shadow-[0_4px_8px_#000]"
       >
         {content}
       </motion.p>
@@ -88,18 +87,25 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black overflow-x-hidden w-full h-full">
-      <Navbar />
-      <div className="w-full flex justify-center h-auto">
-        <div>
-          <Image
-            src={"/image/about_pic.png"}
-            alt="Profile"
-            width={320}
-            height={320}
-            className="rounded-full w-[6rem] md:w-[9rem] h-[6rem] md:h-[9rem] mx-auto mt-2 md:mt-4 mb-4 md:mb-16"
-          />
-          <div className="w-full max-w-[95%] md:max-w-[60%] m-auto my-10">
+    <div className="min-h-screen bg-gradient-to-r from-[#9C27B0] to-[#4A148C] overflow-x-hidden w-full h-full">
+      <div className="w-full flex justify-center h-auto pt-[4.5rem] md:pt-[6rem]">
+        <div className="w-full">
+          <div className="max-w-[100%] flex justify-center m-auto">
+          <div className="relative w-[10rem] md:w-[13rem] h-[10rem] md:h-[13rem] mt-10 flex items-center justify-center bg-gradient-to-tr from-[#1b1f24] via-[#101113] to-[#000000] rounded-full hover:shadow-[0_0_20px_#fff]">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#9C27B0] via-[#fff] to-[#9C27B0] p-1 ">
+              <div className="w-full h-full bg-[#101113] rounded-full flex items-center justify-center">
+                <Image
+                  src={"/image/about_pic.png"}
+                  alt="Profile"
+                  width={320}
+                  height={320}
+                  className="rounded-full object-cover w-[9rem] md:w-[12rem] h-[9rem] md:h-[12rem] border-4 border-[#1b1f24]"
+                />
+              </div>
+            </div>
+          </div>
+          </div>
+          <div className="w-full max-w-[95%] md:max-w-[60%] m-auto my-5 md:my-10">
             {sections.map((sec, i) => (
               <AnimatedSection key={i} id={sec.id} title={sec.title} content={sec.content} />
             ))}

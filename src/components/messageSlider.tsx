@@ -28,11 +28,11 @@ export default function MessageSlider({ messages }: MessageSliderProps) {
         {allMessages.map((msg, idx) => (
           <div
             key={idx}
-            className="w-[10%] md:w-[15%] bg-[#d5bea2] rounded-xl shadow-md px-4 py-3 text-center flex-shrink-0"
+            className="w-[10%] md:w-[15%] bg-white/20 rounded-xl shadow-md px-4 py-3 text-center flex-shrink-0"
           >
             <p className="text-xs text-black text-left">{new Date(msg.createdAt).toLocaleString('en-US', {dateStyle: 'medium', timeStyle: 'short',})}</p>
             <p className="text-[1.2rem] mt-2 text-[#353535] font-semibold">{msg.name}</p>
-            <p className="italic text-black text-left">&quot;{msg.message}&quot;</p>
+            <p className="italic text-white text-left">&quot;{msg.message}&quot;</p>
           </div>
         ))}
       </div>

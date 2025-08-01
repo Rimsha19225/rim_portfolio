@@ -66,9 +66,9 @@ const ProjectCard = ({ src, index, link}: { src: string; index: number, link: st
 
 const LatestProjects = () => {
   return (
-    <div className="bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black w-full py-10 md:py-16 px-4 md:px-6">
-      <h2 className="text-[2rem] md:text-[3rem] font-bold text-black mb-6 md:mb-8 text-center drop-shadow-md text-shadow-[0_3px_5px_#ffe4c4]">
-        Latest <span className="text-[#ffe4c4] text-shadow-[0_4px_8px_#000]">Projects</span>
+    <div className="bg-gradient-to-r from-[#9C27B0] to-[#4A148C] w-full py-10 md:py-16 px-4 md:px-6">
+      <h2 className="text-[2rem] md:text-[3rem] font-bold text-black mb-6 md:mb-8 text-center drop-shadow-md text-shadow-[0_3px_5px_#fff]">
+        Latest <span className="text-[#fff] text-shadow-[0_0px_0px_#fff]">Projects</span>
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 max-w-[65rem] mx-auto">
         {projectImages.map((image, index) => (

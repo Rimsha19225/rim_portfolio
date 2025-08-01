@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import Navbar from "../../components/navbar";
 import emailjs from "emailjs-com";
 
 const ContactMe = () => {
@@ -62,10 +61,9 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black pb-10 px-2 md:px-6">
-      <Navbar />
-      <h2 className="text-[2rem] md:text-[3rem] font-bold text-center text-black drop-shadow-md mb-5 md:mb-10">
-        Contact <span className="text-[#ffe4c4]">Me!</span>
+    <div className="min-h-screen w-full bg-gradient-to-r from-[#9C27B0] to-[#4A148C] pb-10 px-2 md:px-6">
+      <h2 className="text-[2rem] md:text-[3rem] pt-[6rem] md:pt-[8rem] font-bold text-center text-black drop-shadow-md mb-2 md:mb-10 text-shadow-[0_3px_5px_#fff]">
+        Contact <span className="text-[#fff] text-shadow-[0_0px_0px_#fff]">Me!</span>
       </h2>
 
       {!submitted && (
@@ -85,7 +83,7 @@ const ContactMe = () => {
               value={form.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#ffe4c4] rounded border border-[#ffe4c4] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
+              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#fff] rounded border border-[#fff] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
             />
             <input
               type="email"
@@ -94,40 +92,40 @@ const ContactMe = () => {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#ffe4c4] rounded border border-[#ffe4c4] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
+              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#fff] rounded border border-[#fff] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
             />
             <input
               type="text"
               name="phone"
               placeholder="Mobile Number"
               onChange={handleChange}
-              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#ffe4c4] rounded border border-[#ffe4c4] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
+              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#fff] rounded border border-[#fff] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
             />
             <input
               type="text"
               name="subject"
               placeholder="Email Subject"
               onChange={handleChange}
-              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#ffe4c4] rounded border border-[#ffe4c4] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
+              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#fff] rounded border border-[#fff] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
             />
           </div>
 
           <div className="mt-4">
             <textarea
               name="message"
-              rows={6}
+              rows={4}
               placeholder="Your Message"
               value={form.message}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#ffe4c4] rounded border border-[#ffe4c4] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
+              className="w-full px-4 py-2 hover:shadow-[0_0_12px_#fff] rounded border border-[#fff] bg-white/20 text-black placeholder:text-[#353535] focus:outline-none"
             />
           </div>
 
           <div className="mt-4">
             <button
               type="submit"
-              className="px-4 md:px-6 py-2 mb-2 md:mb-0 w-full md:py-3 bg-[#000] text-[#ffe4c4] font-semibold rounded transition hover:shadow-[0_0_12px_#ffe4c4]"
+              className="px-4 md:px-6 py-2 mb-2 md:mb-0 w-full md:py-3 bg-[#000] text-[#fff] font-semibold rounded transition hover:shadow-[0_0_12px_#fff]"
             >
               Send Message
             </button>
@@ -142,7 +140,7 @@ const ContactMe = () => {
           transition={{ duration: 0.6 }}
           className="text-center text-[#000] mt-32"
         >
-          <h3 className="text-[1.8rem] md:text-[3rem] font-semibold text-[#ffe4c4] mb-2">Thank you!</h3>
+          <h3 className="text-[1.8rem] md:text-[3rem] font-semibold text-[#fff] mb-2">Thank you!</h3>
           <p className="text-md text-[0.9rem] md:text-[1.5rem]">
             Your message has been sent successfully.
           </p>

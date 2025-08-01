@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import Navbar from "../../components/navbar";
 
 const projects = [
   {
@@ -154,7 +153,6 @@ const ProjectCard = ({name, description, image, index, link, id}: {name: string;
         !isEven ? "md:flex-row-reverse" : ""
       } items-center gap-1 bg-white/10 backdrop-blur-md rounded-xl overflow-hidden shadow-lg`}
     >
-      {/* Image */}
       <div className="w-full md:w-[45%]">
         <Image
           src={image}
@@ -164,13 +162,11 @@ const ProjectCard = ({name, description, image, index, link, id}: {name: string;
           className="w-[100%] h-[12rem] md:h-[23rem] object-cover rounded-xl"
         />
       </div>
-
-      {/* Text */}
       <div className="w-full md:w-[50%] text-center md:text-left text-black space-y-4 p-3 md:p-4">
-        <h3 className="text-[1.5rem] md:text-[2.2rem] font-bold text-shadow-[0_3px_5px_#ffe4c4] leading-[2.5rem]">{name}</h3>
-        <p className="text-sm md:text-base text-black md:text-[#ffe4c4] md:text-shadow-[0_3px_5px_#000] text-justify">{description}</p>
+        <h3 className="text-[1.5rem] md:text-[2.2rem] font-bold text-shadow-[0_3px_5px_#fff] leading-[2.5rem]">{name}</h3>
+        <p className="text-sm md:text-base text-[#fff] md:text-shadow-[0_3px_5px_#000] text-justify">{description}</p>
         <Link href={link} target="_blank">
-          <button className={`px-4 py-2 text-[#ffe4c4] bg-black font-semibold rounded ${!isEven ? "md:hover:shadow-[0_0_15px_#000]" : ""} hover:shadow-[0_0_15px_#ffe4c4] transition`}>
+          <button className={`px-4 py-2 text-[#fff] bg-black font-semibold rounded ${!isEven ? "md:hover:shadow-[0_0_15px_#fff]" : ""} hover:shadow-[0_0_15px_#fff] transition`}>
             View Project
           </button>
         </Link>
@@ -182,14 +178,10 @@ const ProjectCard = ({name, description, image, index, link, id}: {name: string;
 
 const ProjectsPage = () => {
   return (
-    <div className="bg-[#d5bea2] md:bg-gradient-to-r md:from-[#ffe4c4] md:to-black w-full pb-16 px-2 md:px-6">
-        <Navbar />
-      {/* Heading */}
-      <h2 className="text-[2rem] md:text-[3rem] font-bold text-black mb-6 md:mb-8 text-center drop-shadow-md text-shadow-[0_3px_5px_#ffe4c4]">
-        My <span className="text-[#ffe4c4] text-shadow-[0_4px_8px_#000]">Projects</span>
+    <div className="bg-gradient-to-r from-[#9C27B0] to-[#4A148C] w-full pb-16 px-2 md:px-6">
+      <h2 className="text-[2rem] md:text-[3rem] pt-[5.5rem] md:pt-[8.5rem] font-bold text-black mb-6 md:mb-8 text-center drop-shadow-md text-shadow-[0_3px_5px_#fff]">
+        My <span className="text-[#fff] text-shadow-[0_0px_0px_#fff]">Projects</span>
       </h2>
-
-      {/* Grid */}
       <div className="grid grid-cols-1 gap-10 max-w-[96%] md:max-w-[55rem] mx-auto">
         {projects.map((project, index) => (
             <ProjectCard

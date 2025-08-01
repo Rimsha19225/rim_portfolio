@@ -10,11 +10,11 @@ export default function AboutText() {
   const shortText = text.slice(0, 120)
 
   return (
-    <p className="text-[#202020] text-[0.8rem] leading-[1.22rem] md:text-[1rem] pb-4 text-justify">
+    <p className="text-[#000] font-semibold text-[0.8rem] leading-[1.22rem] md:text-[0.9rem] pb-4 text-justify">
       {showMore ? text : shortText + '...'}
       <button
         onClick={() => setShowMore(!showMore)}
-        className="text-[#000] font-semibold ml-1 hover:text-[#d5bea2] hover:underline underline-offset-5 transition duration-200"
+        className="text-[#000] font-semibold ml-1 hover:text-[#fff] hover:underline underline-offset-5 transition duration-200"
       >
         {showMore ? 'See Less' : 'See More'}
       </button>
