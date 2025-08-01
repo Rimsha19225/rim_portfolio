@@ -38,10 +38,10 @@ const MainPageText = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#9C27B0] to-[#4A148C] overflow-x-hidden w-full h-full">
-      <div ref={sectionRef} className="flex justify-center pt-[1rem] md:pt-[16rem] items-center h-[100vh] md:h-[68vh]">
+      <div ref={sectionRef} className="flex justify-center pt-[0.3rem] md:pt-[16rem] items-center h-[100vh] md:h-[68vh]">
         <div className="flex flex-col-reverse md:flex-row w-full gap-[3.5rem] md:gap-4 px-2 md:px-6 justify-between items-center max-w-[60rem]">
           <div className="w-[95%] md:w-[44%]">
-            <motion.div initial={{ x: -50, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="mb-2 md:mb-3 text-[#fff] text-[0.8rem] md:text-[1rem]">Hello it&apos;s me</motion.div>
+            <motion.div initial={{ x: -50, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="mb-2 md:mb-3 text-[#fff] font-semibold text-[0.8rem] md:text-[1rem]">Hello it&apos;s me</motion.div>
             <motion.div initial={{ x: -50, opacity: 0 }} animate={leftControl} transition={{ duration:2, ease: "easeInOut"}} className="mb-2 md:mb-3 text-[1rem] md:text-[1.3rem] leading-[1.7rem] md:leading-[2rem] text-[#000] font-extrabold">
                 <span className="text-[#000] text-[2rem] md:text-[3rem] text-shadow-[0_3px_5px_#fff]">Rimsha Arshad</span><br />I am a <span ref={typedRef} className="text-[#fff] md:text-shadow-[0_1px_6px_#000]" />
             </motion.div>
